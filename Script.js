@@ -1,25 +1,18 @@
-const sentences = [
-  { english: "How are you?", hindi: "आप कैसे हैं?" },
-  { english: "I am fine, thank you.", hindi: "मैं ठीक हूँ, धन्यवाद।" },
-  { english: "What is your name?", hindi: "आपका नाम क्या है?" },
-  { english: "My name is Rahul.", hindi: "मेरा नाम राहुल है।" },
-  { english: "Where are you going?", hindi: "आप कहाँ जा रहे हैं?" },
-  { english: "I am going to school.", hindi: "मैं स्कूल जा रहा हूँ।" },
-  { english: "Please help me.", hindi: "कृपया मेरी मदद करें।" },
-  { english: "I don't understand.", hindi: "मुझे समझ नहीं आया।" },
-  { english: "What time is it?", hindi: "अभी क्या समय हुआ है?" },
-  { english: "I am hungry.", hindi: "मुझे भूख लगी है।" },
-  // और भी जोड़ सकते हैं...
+const words = [
+  { word: "Hello", meaning: "नमस्ते" },
+  { word: "Thank you", meaning: "धन्यवाद" },
+  { word: "Sorry", meaning: "माफ़ कीजिए" },
+  { word: "Please", meaning: "कृपया" },
+  { word: "Come", meaning: "आओ" },
+  { word: "Go", meaning: "जाओ" },
+  // Aise hi aur add karte jao
 ];
 
-const container = document.getElementById("sentences");
+const listDiv = document.getElementById("word-list");
 
-sentences.forEach((item, index) => {
+words.forEach(item => {
   const div = document.createElement("div");
-  div.className = "sentence";
-  div.innerHTML = `
-    <div class="english">${index + 1}. ${item.english}</div>
-    <div class="hindi">${item.hindi}</div>
-  `;
-  container.appendChild(div);
+  div.className = "word-item";
+  div.innerHTML = `<div class="word">${item.word}</div><div class="meaning">${item.meaning}</div>`;
+  listDiv.appendChild(div);
 });
