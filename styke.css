@@ -111,3 +111,22 @@ h1 {
   font-size: 18px;
   line-height: 1.6;
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #1a73e8;
+  color: white;
+}
